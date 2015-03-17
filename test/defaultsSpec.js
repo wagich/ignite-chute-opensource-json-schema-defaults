@@ -85,6 +85,20 @@ describe("defaults", function() {
     });
   });
 
+  it("returns null if property default is set to null", function () {
+    expect(defaults({
+      "type": "object",
+      "properties": {
+        "albums": {
+          "type": "array",
+          "default": null
+        }
+      }
+    })).toEqual({
+      "albums": null
+    });
+  });
+
   it("sets album shortcut from default", function() {
     expect(defaults({
       "type": "object",
