@@ -23,7 +23,6 @@ describe("wrapper", function() {
 
 
 describe("defaults", function() {
-
   it("reads defaults from object attributes", function() {
     expect(defaults({
       "title": "Album Options",
@@ -146,6 +145,22 @@ describe("defaults", function() {
     ]);
   });
 
+  it("sets default values of array of objects", function () {
+    var values = defaults({
+      "type": "array",
+      "default": [
+        {
+          "fieldOne": "1",
+          "fieldTwo": "2"
+        }
+      ]
+    });
+    expect(values).toEqual([
+      { fieldOne: "1", fieldTwo: "2" }
+    ]);
+    expect(Array.isArray(values)).toBe(true);
+  });
+
   it("sets default values of nested array type", function() {
     expect(defaults({
       "type": "object",
@@ -256,7 +271,7 @@ describe("defaults", function() {
       }
     });
   });
-  
+
   it('should merge objects from "allOf" list and extract defaults from result object', function () {
     expect(defaults({
       "type": "object",
@@ -337,7 +352,5 @@ describe("defaults", function() {
         price: 100
       }
     });
-
   });
-
 });
