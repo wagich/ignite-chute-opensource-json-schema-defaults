@@ -1,3 +1,9 @@
+<a name="0.2.0"></a>
+## 0.2.0 (2016-08-05)
+
+* array defaults ([7d98ffb6](https://github.com/chute/json-schema-defaults/commit/7d98ffb634507816bc70dd9551785cae7e32ef4f))
+
+
 <a name="0.1.1"></a>
 ### 0.1.1 (2015-03-17)
 
