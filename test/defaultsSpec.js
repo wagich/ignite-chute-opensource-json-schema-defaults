@@ -212,6 +212,83 @@ describe("defaults", function() {
     });
   });
 
+  it("returns empty array when no defaults set", function() {
+    expect(defaults({
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    })).toEqual([]);
+  });
+
+  it("returns array with min items", function() {
+    expect(defaults({
+      "type": "object",
+      "properties": {
+        "albums": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "default": "xyz"
+          },
+          "minItems": 2
+        }
+      }
+    })).toEqual({
+      "albums": ["xyz", "xyz"]
+    });
+  });
+
+  it("returns array of tuples with one item set by default value", function() {
+    expect(defaults({
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "default": "xyz"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    })).toEqual(["xyz"]);
+  });
+
+  it("returns array of tuples with undefined value if requested by min items", function() {
+    expect(defaults({
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "default": "xyz"
+        },
+        {
+          "type": "number"
+        }
+      ],
+      "minItems": 2
+    })).toEqual(["xyz", undefined]);
+  });
+
+  it("returns array of tuples with undefined value if there are defaults after it", function() {
+    expect(defaults({
+      "type": "array",
+      "items": [
+        {
+          "type": "string",
+          "default": "xyz"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "string",
+          "default": "abc"
+        }
+      ]
+    })).toEqual(["xyz", undefined, "abc"]);
+  });
+
   it('returns defaults if they are present in reference', function () {
     expect(defaults({
       "type": "object",
@@ -256,15 +333,7 @@ describe("defaults", function() {
 
   it('returns defaults if they are present in nested reference', function () {
     expect(defaults({
-      "type": "object",
-      "properties": {
-        "foo": {
-          "$ref": "#/definitions/foo"
-        },
-        "sort": {
-          "type": "string"
-        }
-      },
+      "$ref": "#/definitions/foo",
       "definitions": {
         "foo": {
           "type": "object",
@@ -280,9 +349,7 @@ describe("defaults", function() {
         }
       }
     })).toEqual({
-      foo: {
-        per_page: 30
-      }
+      per_page: 30
     });
   });
 
