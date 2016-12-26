@@ -239,6 +239,26 @@ describe("defaults", function() {
     });
   });
 
+  it("returns array of min items that are not the same instance", function() {
+    var result = defaults({
+      "type": "object",
+      "properties": {
+        "albums": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      }
+    })
+    expect(result).toEqual({
+      "albums": [{}, {}]
+    });
+    expect(result['albums'][0]).not.toBe(result['albums'][1]);
+  });
+
   it("returns array of tuples with one item set by default value", function() {
     expect(defaults({
       "type": "array",
