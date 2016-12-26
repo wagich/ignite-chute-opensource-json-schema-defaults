@@ -27,7 +27,7 @@ Works both in node and browser.
 - CommonJS (node.js)
 
   ```js
-  var defaults = require('./path/to/index.js');
+  var defaults = require('json-schema-defaults');
   defaults({ ... });
   ```
 
