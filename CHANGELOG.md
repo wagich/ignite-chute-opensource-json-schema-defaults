@@ -1,3 +1,8 @@
+<a name="0.3.0"></a>
+## 0.3.0 (2016-12-26)
+
+* clone array items defined by object schema ([31fd902a](https://github.com/chute/json-schema-defaults/commit/31fd902a7c939009f07ba08438f5f2d6a40023c1))
+
 <a name="0.2.0"></a>
 ## 0.2.0 (2016-08-05)
 
