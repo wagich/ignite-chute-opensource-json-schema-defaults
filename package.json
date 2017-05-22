@@ -15,6 +15,9 @@
     "url": "https://github.com/chute/json-schema-defaults/issues"
   },
   "main": "index.js",
+  "bin": {
+    "json-schema-defaults": "bin/defaults.js"
+  },
   "scripts": {
     "test": "./node_modules/.bin/jasmine-node test/ && ./node_modules/karma/bin/karma start --single-run"
   },
@@ -36,5 +39,8 @@
     "karma-firefox-launcher": "^1.0.1",
     "karma-jasmine": "^1.1.0",
     "karma-phantomjs-launcher": "^1.0.4"
+  },
+  "dependencies": {
+    "argparse": "^1.0.9"
   }
 }
