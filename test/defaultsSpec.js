@@ -259,6 +259,27 @@ describe("defaults", function() {
     expect(result['albums'][0]).not.toBe(result['albums'][1]);
   });
 
+  it("returns empty objects if scaffold:true", function() {
+    var result = defaults({
+      "type": "object",
+      "properties": {
+        "albums": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      }
+    }, null, {
+      scaffold: true
+    })
+    expect(result).toEqual({
+      "albums": [{}, {}]
+    });
+  });
+
   it("returns array of tuples with one item set by default value", function() {
     expect(defaults({
       "type": "array",
@@ -453,5 +474,88 @@ describe("defaults", function() {
         price: 100
       }
     });
+  });
+
+  it('scaffolds default values when scaffold: true', function() {
+    expect(defaults({
+      "type": "object",
+      "properties": {
+        "per_page": {
+          "type": "integer",
+          "default": 30
+        },
+        "string": {
+          "type": "string"
+        },
+        "number": {
+          "type": "number"
+        },
+        "integer": {
+          "type": "integer"
+        },
+        "boolean": {
+          "type": "boolean"
+        },
+        "object": {
+          "type": "object"
+        },
+        "array": {
+          "type": "array"
+        },
+        "null": {
+          "type": "null"
+        },
+        "booleanSchemaTrue": true,
+        "booleanSchemaFalse": false,
+        "emptySchema": {}
+      }
+    }, null, {
+      scaffold: true
+    })).toEqual({
+      per_page: 30,
+      string: '',
+      number: 0,
+      integer: 0,
+      boolean: false,
+      object: {},
+      array: [],
+      'null': null,
+      booleanSchemaTrue: null,
+      emptySchema: null
+    });
+  })
+
+  it("returns array of with default values if scaffold: true", function() {
+    expect(defaults({
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "integer"
+        },
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "object"
+        },
+        {
+          "type": "array"
+        },
+        {
+          "type": "null"
+        },
+        true,
+        {}
+      ],
+      "minItems": 10
+    }, null, {
+      scaffold: true
+    })).toEqual(["", 0, 0,  false, {}, [], null, null, null]);
   });
 });
