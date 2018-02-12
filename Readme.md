@@ -61,6 +61,32 @@ Works both in node and browser.
   defaults({ ... });
   ```
 
+- CLI
+
+  If installed globally:
+
+  ```sh
+  json-schema-defaults schema.json
+  ```
+
+  If locally:
+
+  ```sh
+  ./node_modules/.bin/json-schema-defaults schema.json
+  ```
+
+  Custom indentation (defaults to 2):
+
+  ```sh
+  json-schema-defaults --indent 4 schema.json
+  ```
+
+  Write into a file:
+
+  ```sh
+  json-schema-defaults schema.json > defaults.json
+  ```
+
 ## Documentation
 
 Call `defaults` with JSON Schema. The default values will be extracted as a JSON.
