@@ -1,3 +1,9 @@
+<a name="0.4.0"></a>
+## 0.4.0 (2018-02-13)
+
+* Add CLI (by @mohd-akram) ([fcb6a27](https://github.com/chute/json-schema-defaults/commit/fcb6a27))
+
+
 <a name="0.3.0"></a>
 ## 0.3.0 (2016-12-26)
 

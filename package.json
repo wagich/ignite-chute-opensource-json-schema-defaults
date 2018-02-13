@@ -1,6 +1,6 @@
 {
   "name": "json-schema-defaults",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Generate JSON object from default values in JSON Schema",
   "homepage": "https://github.com/chute/grunt-json-schema-defaults",
   "author": {
