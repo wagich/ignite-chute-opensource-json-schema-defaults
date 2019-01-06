@@ -272,7 +272,7 @@ describe("defaults", function() {
           "maxItems": 2
         }
       }
-    }, null, {
+    }, {
       scaffold: true
     })
     expect(result).toEqual({
