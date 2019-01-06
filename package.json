@@ -12,6 +12,7 @@
     "url": "https://github.com/wagich/ignite-chute-opensource-json-schema-defaults.git"
   },
   "main": "index.js",
+  "types": "./lib/defaults.d.ts",
   "bin": {
     "json-schema-defaults": "bin/defaults.js"
   },
