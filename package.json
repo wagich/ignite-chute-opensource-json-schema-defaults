@@ -1,18 +1,15 @@
 {
-  "name": "json-schema-defaults",
-  "version": "0.4.0",
+  "name": "@wagnergraphics/json-schema-defaults",
+  "version": "0.5.0",
   "description": "Generate JSON object from default values in JSON Schema",
-  "homepage": "https://github.com/chute/grunt-json-schema-defaults",
+  "homepage": "https://github.com/wagich/ignite-chute-opensource-json-schema-defaults",
   "author": {
     "name": "Chute",
     "email": "hello@getchute.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chute/json-schema-defaults.git"
-  },
-  "bugs": {
-    "url": "https://github.com/chute/json-schema-defaults/issues"
+    "url": "https://github.com/wagich/ignite-chute-opensource-json-schema-defaults.git"
   },
   "main": "index.js",
   "bin": {
