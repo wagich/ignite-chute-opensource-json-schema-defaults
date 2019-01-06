@@ -1,6 +1,6 @@
 {
   "name": "@wagnergraphics/json-schema-defaults",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Generate JSON object from default values in JSON Schema",
   "homepage": "https://github.com/wagich/ignite-chute-opensource-json-schema-defaults",
   "author": {
