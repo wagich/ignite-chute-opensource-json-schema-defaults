@@ -1,3 +1,9 @@
+<a name="0.5.0"></a>
+## 0.5.0 (2019-01-06)
+
+* Add scaffolding support to generate values without schema defaults (by @mokkabonna) ([5d7d66f](https://github.com/mokkabonna/json-schema-defaults/commit/5d7d66f61e1fc24e630597938cfca0330cf5942d))
+* Add support for types specified as arrays, enables generation for `type: ["null", "object"]` (by @cambeyer) ([c17fb19](https://github.com/cambeyer/ignite-chute-opensource-json-schema-defaults/commit/c17fb19b23e66b750fb0d1ad7ec08d309604dfad))
+
 <a name="0.4.0"></a>
 ## 0.4.0 (2018-02-13)
 
