@@ -1,3 +1,8 @@
+<a name="0.6.0"></a>
+## 0.6.0 (2019-01-06)
+
+* Add typescript definitions
+
 <a name="0.5.0"></a>
 ## 0.5.0 (2019-01-06)
 
