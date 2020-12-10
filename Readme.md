@@ -1,4 +1,4 @@
-# JSON Schema Defaults  [![Build Status](https://travis-ci.org/chute/json-schema-defaults.svg?branch=master)](https://travis-ci.org/chute/json-schema-defaults)
+# JSON Schema Defaults
 
 > Generate JSON object from default values in JSON Schema
 
@@ -12,12 +12,6 @@ Works both in node and browser.
   npm install json-schema-defaults
   ```
 
-- bower
-
-  ```sh
-  bower install json-schema-defaults
-  ```
-
 - manual
 
   Download [lib/defaults.js](lib/defaults.js)
@@ -29,20 +23,6 @@ Works both in node and browser.
   ```js
   var defaults = require('json-schema-defaults');
   defaults({ ... });
-  ```
-
-- RequireJS
-
-  ```js
-  // in require.js config
-  paths: {
-    'defaults': './path/to/lib/defaults.js'
-  }
-
-  // in a file
-  define(['defaults'], function(defaults) {
-    defaults({ ... });
-  });
   ```
 
 - standalone
@@ -59,32 +39,6 @@ Works both in node and browser.
   // `window.jsonSchemaDefaults` now points to the original variable
   // `defaults` points to this script
   defaults({ ... });
-  ```
-
-- CLI
-
-  If installed globally:
-
-  ```sh
-  json-schema-defaults schema.json
-  ```
-
-  If locally:
-
-  ```sh
-  ./node_modules/.bin/json-schema-defaults schema.json
-  ```
-
-  Custom indentation (defaults to 2):
-
-  ```sh
-  json-schema-defaults --indent 4 schema.json
-  ```
-
-  Write into a file:
-
-  ```sh
-  json-schema-defaults schema.json > defaults.json
   ```
 
 ## Documentation

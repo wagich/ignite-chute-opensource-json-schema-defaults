@@ -1,5 +1,4 @@
-var defaults = typeof require !== 'undefined' ? require('../lib/defaults') : jsonSchemaDefaults;
-
+var defaults = require('../lib/defaults');
 
 describe("wrapper", function() {
   it("doesn't expose as global in node", function() {
