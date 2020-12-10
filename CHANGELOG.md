@@ -1,3 +1,8 @@
+<a name="0.7.0"></a>
+## 0.7.0 (2020-12-10)
+
+* Disables generation of optional members (properties not required)
+
 <a name="0.6.0"></a>
 ## 0.6.0 (2019-01-06)
 
